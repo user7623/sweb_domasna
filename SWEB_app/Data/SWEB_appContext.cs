@@ -14,14 +14,13 @@ namespace SWEB_app.Model
         {
         }
 
-        public DbSet<SWEB_app.Models.Student> Student { get; set; }
+        public DbSet<Student> Student { get; set; }
 
-        public DbSet<SWEB_app.Models.Course> Course { get; set; }
+        public DbSet<Course> Course { get; set; }
 
-        public DbSet<SWEB_app.Models.Teacher> Teacher { get; set; }
+        public DbSet<Teacher> Teacher { get; set; }
 
-        public DbSet<SWEB_app.Models.Enrollment> Enrollment { get; set; }
-
+        public DbSet<Enrollment> Enrollment { get; set; }
         /*protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<Enrollment>()
@@ -33,7 +32,7 @@ namespace SWEB_app.Model
                 .WithMany(p => p.Students)
                 .HasForeignKey(p => p.CourseID); 
             builder.Entity<Course>()
-                .HasMany<Teacher>(p => p.Teacher)
+                .HasMany<Teacher>(p => p.FirstTeacherID)
                 .WithMany(p => p.Courses)
                 .HasForeignKey(p => p.TeacherID); 
             

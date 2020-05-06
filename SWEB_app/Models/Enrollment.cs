@@ -11,7 +11,7 @@ namespace SWEB_app.Models
         [Required]
         public int ID { get; set; }
         [Required]
-        public int StudentID { get; set; }
+        public string StudentID { get; set; }
         [Required]
         public int CourseID { get; set; }
         [StringLength(10, MinimumLength = 3)]

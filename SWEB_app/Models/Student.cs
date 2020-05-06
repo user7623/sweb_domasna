@@ -16,26 +16,26 @@ namespace SWEB_app.Models
         [Required]
         [Display(Name = "Student ID")]
         public string StudentID { get; set; }
-        
+
         [StringLength(50, MinimumLength = 3)]
         [Required]
         [Display(Name = "First Name")]
-        public string FirstName;
-        
+        public string FirstName { get; set; }
+
         [StringLength(50, MinimumLength = 3)]
         [Required]
         [Display(Name = "Last Name")]
-        public string LastName;
+        public string LastName { get; set; }
 
-        DateTime EnrolmentDate;
+        public DateTime EnrolmentDate { get; set; }
 
-        [Range(0, 360)]
-        public int AcquiredCredits;
-        
-        public int CurrentSemester;
-        
+        [Required]
+        public int AcquiredCredits { get; set; }
+
+        public int CurrentSemester { get; set; }
+
         [StringLength(25, MinimumLength = 3)]
-        public string EducationLevel;
+        public string EducationLevel { get; set; }
 
         public ICollection<Enrollment> Courses { get; set; }
 
